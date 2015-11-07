@@ -1,6 +1,5 @@
 package com.example.demo3c;
 
-import com.example.android.wifidirect.R;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -28,8 +27,10 @@ public class ActionBar_TabNav extends Activity implements
 		// 设置ActionBar的导航方式：Tab导航
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		// 依次添加3个Tab页，并为3个Tab标签添加事件监听器
+		actionBar.addTab(actionBar.newTab().setText("连接")
+				.setTabListener(this));
 		actionBar.addTab(actionBar.newTab().setText("按键")
-			.setTabListener(this));
+				.setTabListener(this));
 		actionBar.addTab(actionBar.newTab().setText("声音")
 			.setTabListener(this));
 		actionBar.addTab(actionBar.newTab().setText("手势")
@@ -107,7 +108,7 @@ public class ActionBar_TabNav extends Activity implements
 		Fragment fragment = null;
 		
 		switch(tab.getPosition()){
-		case(0):{
+		case(1):{
 			// 创建一个新的Fragment对象
 			fragment=new ButtonControlFragment();
 			break;
