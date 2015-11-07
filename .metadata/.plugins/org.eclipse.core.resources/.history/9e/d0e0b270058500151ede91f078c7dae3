@@ -4,27 +4,10 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    
-    
-    
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="20" />
-	
-    
-    <!-- following is new, added for wifi -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-   
-    <!-- above is new, added for wifi -->
-    
-    
-    
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -39,13 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        
-         <!-- Used for transferring files  after a successful connection -->
-        <service android:enabled="true" android:name=".FileTransferService" />
     </application>
 
     
+    <!-- following is new, added for wifi -->
     
-   
+    <!-- above is new, added for wifi -->
 </manifest>
