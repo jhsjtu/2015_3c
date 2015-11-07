@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class ActionBar_TabNav extends Activity implements
-	ActionBar.TabListener,
+	ActionBar.TabListener，
 	ChannelListener,
 	DeviceActionListener
 {

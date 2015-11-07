@@ -1,13 +1,10 @@
 package com.example.demo3c;
 
 
-import com.example.android.wifidirect.DeviceListFragment.DeviceActionListener;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.net.wifi.p2p.WifiP2pManager.ChannelListener;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,9 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class ActionBar_TabNav extends Activity implements
-	ActionBar.TabListener,
-	ChannelListener,
-	DeviceActionListener
+	ActionBar.TabListener
 {
 	private static final String SELECTED_ITEM = "selected_item";
 	TextView tv;
