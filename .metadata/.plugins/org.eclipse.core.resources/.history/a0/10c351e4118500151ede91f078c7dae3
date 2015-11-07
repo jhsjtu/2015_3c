@@ -284,7 +284,7 @@ public class DeviceDetailFragment extends Fragment implements
 				return f.getAbsolutePath();
 			} catch (IOException e)
 			{
-				Log.e(MyActivity.TAG, e.getMessage());
+				Log.e(WiFiDirectActivity.TAG, e.getMessage());
 				return null;
 			}
 		}
@@ -336,7 +336,7 @@ public class DeviceDetailFragment extends Fragment implements
 			inputStream.close();
 		} catch (IOException e)
 		{
-			Log.d(MyActivity.TAG, e.toString());
+			Log.d(WiFiDirectActivity.TAG, e.toString());
 			return false;
 		}
 		return true;

@@ -263,9 +263,9 @@ public class DeviceDetailFragment extends Fragment implements
 			try
 			{
 				ServerSocket serverSocket = new ServerSocket(8988);
-				Log.d(MyActivity.TAG, "Server: Socket opened");
+				Log.d(WiFiDirectActivity.TAG, "Server: Socket opened");
 				Socket client = serverSocket.accept();
-				Log.d(MyActivity.TAG, "Server: connection done");
+				Log.d(WiFiDirectActivity.TAG, "Server: connection done");
 				final File f = new File(
 						Environment.getExternalStorageDirectory() + "/"
 								+ context.getPackageName() + "/wifip2pshared-"
@@ -276,7 +276,7 @@ public class DeviceDetailFragment extends Fragment implements
 					dirs.mkdirs();
 				f.createNewFile();
 
-				Log.d(MyActivity.TAG,
+				Log.d(WiFiDirectActivity.TAG,
 						"server: copying files " + f.toString());
 				InputStream inputstream = client.getInputStream();
 				copyFile(inputstream, new FileOutputStream(f));
@@ -284,7 +284,7 @@ public class DeviceDetailFragment extends Fragment implements
 				return f.getAbsolutePath();
 			} catch (IOException e)
 			{
-				Log.e(MyActivity.TAG, e.getMessage());
+				Log.e(WiFiDirectActivity.TAG, e.getMessage());
 				return null;
 			}
 		}
@@ -336,7 +336,7 @@ public class DeviceDetailFragment extends Fragment implements
 			inputStream.close();
 		} catch (IOException e)
 		{
-			Log.d(MyActivity.TAG, e.toString());
+			Log.d(WiFiDirectActivity.TAG, e.toString());
 			return false;
 		}
 		return true;

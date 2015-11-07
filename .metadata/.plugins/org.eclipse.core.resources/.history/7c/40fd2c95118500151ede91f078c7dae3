@@ -34,7 +34,7 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver
 
 	private WifiP2pManager manager;
 	private Channel channel;
-	private MyActivity activity;
+	private WiFiDirectActivity activity;
 
 	/**
 	 * @param manager
@@ -45,7 +45,7 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver
 	 *            activity associated with the receiver
 	 */
 	public WiFiDirectBroadcastReceiver(WifiP2pManager manager, Channel channel,
-			MyActivity activity)
+			WiFiDirectActivity activity)
 	{
 		super();
 		this.manager = manager;
@@ -78,7 +78,7 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver
 				activity.resetData();
 
 			}
-			Log.d(MyActivity.TAG, "P2P state changed - " + state);
+			Log.d(WiFiDirectActivity.TAG, "P2P state changed - " + state);
 		} else if (WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action))
 		{
 
@@ -90,7 +90,7 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver
 				manager.requestPeers(channel, (PeerListListener) activity
 						.getFragmentManager().findFragmentById(R.id.frag_list));
 			}
-			Log.d(MyActivity.TAG, "P2P peers changed");
+			Log.d(WiFiDirectActivity.TAG, "P2P peers changed");
 		} else if (WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION
 				.equals(action))
 		{
